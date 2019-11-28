@@ -19,7 +19,6 @@ function MiddleSection()
     {
         for (let i = 0; i < text.length; i++)
         {
-
             timeoutId = setTimeout(() =>
             {
                 if (document.getElementById(id))
@@ -30,7 +29,7 @@ function MiddleSection()
                 {
                     typeWriter("Sowtware Engineer", "split-text2")
                 }
-            }, 70 * i);
+            }, 80 * i);
 
         }
 
