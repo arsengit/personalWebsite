@@ -40,7 +40,7 @@ function Header(props: IHeaderProps)
 {
   const { siteTitle } = props;
   return (
-    <header className="font-bold fixed w-full">
+    <header className="font-bold color-red fixed w-full z-10 text-gray-400 px-2">
       <nav className="container">
         <ul className="flex ">
           {
@@ -48,7 +48,7 @@ function Header(props: IHeaderProps)
               <li className={tab.text === "Arsen" ? "flex-1" : "ml-5"} key={index}>
                 <AniLink
                   to={tab.path}
-                  paintDrip hex="#663399"
+                  paintDrip hex="#40484C"
                 >{tab.text}</AniLink >
               </li>
             )
@@ -57,6 +57,7 @@ function Header(props: IHeaderProps)
       </nav>
     </header>
   )
+
 }
 
 
