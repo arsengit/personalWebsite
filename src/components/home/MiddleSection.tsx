@@ -39,7 +39,7 @@ function MiddleSection()
         <>
             <div className="h-full flex justify-center items-center flex-col">
                 <div className="h-full absolute bg-gray-900 w-full opacity-25" />
-                <div className="w-40 rounded-full border-4 border-gray-600">
+                <div className="w-40 rounded-full border-2 border-gray-100">
                     <Image className="rounded-full" image="myImg" />
                 </div>
                 <div className="h-20 flex justify-center flex-col z-50">

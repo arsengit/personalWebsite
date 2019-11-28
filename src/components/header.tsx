@@ -47,6 +47,7 @@ function Header(props: IHeaderProps)
             tabs.map((tab, index) =>
               <li className={tab.text === "Arsen" ? "flex-1" : "ml-5"} key={index}>
                 <AniLink
+                  activeClassName="active"
                   to={tab.path}
                   paintDrip hex="#40484C"
                 >{tab.text}</AniLink >

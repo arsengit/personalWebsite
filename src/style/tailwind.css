@@ -3,3 +3,12 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.h1 {
+    @apply text-4xl font-bold text-center;
+    color: #333;
+}
+
+.active {
+    border-bottom: 1px solid red;
+}
