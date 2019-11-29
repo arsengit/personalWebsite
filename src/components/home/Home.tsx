@@ -4,9 +4,15 @@ import Particles from 'react-particles-js';
 
 function Home(props)
 {
-  let [dark, setDark] = React.useState(true);
+  let [dark, setDark] = React.useState(false);
+
+
   React.useEffect(() =>
   {
+    if (document.body.classList.contains("dark"))
+    {
+      setDark(true)
+    }
     window.addEventListener("change", onChange);
     return () =>
     {
@@ -49,6 +55,7 @@ function Home(props)
       }
     }
   }
+  console.log(params, dark)
   return (
     <div className="h-screen">
       <div className="absolute h-full w-full">

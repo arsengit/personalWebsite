@@ -1,5 +1,6 @@
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import React from "react"
+import DarkMode from "./darkMode/DarkMode";
 
 interface IHeaderProps
 {
@@ -55,6 +56,9 @@ function Header(props: IHeaderProps)
               </li>
             )
           }
+          <li className="ml-5 flex items-center">
+            <DarkMode />
+          </li>
         </ul>
       </nav>
     </header>

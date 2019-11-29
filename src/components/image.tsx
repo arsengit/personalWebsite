@@ -33,14 +33,13 @@ const Image = (props) =>
       }
       myImg: file(relativePath: { eq: "main/myImg.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 300, quality: 40) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
-
   return <Img fluid={data[props.image].childImageSharp.fluid} className={props.className} />
 }
 
