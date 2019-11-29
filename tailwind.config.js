@@ -5,8 +5,17 @@ module.exports = {
     },
     container: {
       center: true,
+    },
+
+    inset: {
+      "10": "10px",
+      "20": "20px",
+      "30": "30px",
+      "40": "40px",
     }
   },
   variants: {},
-  plugins: []
+  plugins: [
+
+  ]
 }

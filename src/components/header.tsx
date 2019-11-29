@@ -3,7 +3,8 @@ import React from "react"
 
 interface IHeaderProps
 {
-  siteTitle: string
+  siteTitle: string,
+  mode?: string,
 }
 
 let tabs = [
@@ -13,7 +14,7 @@ let tabs = [
     color: "",
   },
   {
-    text: "home",
+    text: "Home",
     path: "/",
     color: "",
   },
@@ -24,7 +25,7 @@ let tabs = [
 
   },
   {
-    text: "Porfolio",
+    text: "Portfolio",
     path: "portfolio",
     color: "",
 
@@ -40,9 +41,9 @@ function Header(props: IHeaderProps)
 {
   const { siteTitle } = props;
   return (
-    <header className="font-bold color-red fixed w-full z-10 text-gray-400 px-2">
+    <header className="font-bold fixed w-full z-10 text-gray-800 px-2 h-16 flex items-center border-b border-gray-400 bg-gray-100">
       <nav className="container">
-        <ul className="flex ">
+        <ul className="flex text-xl">
           {
             tabs.map((tab, index) =>
               <li className={tab.text === "Arsen" ? "flex-1" : "ml-5"} key={index}>
