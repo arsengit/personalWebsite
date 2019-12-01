@@ -12,6 +12,7 @@ module.exports = {
       "20": "20px",
       "30": "30px",
       "40": "40px",
+      "45": "45px",
     }
   },
   variants: {},
