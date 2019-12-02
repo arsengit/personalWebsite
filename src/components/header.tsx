@@ -43,20 +43,20 @@ let tabs = [
 function Header(props: IHeaderProps)
 {
   const [hamburger, setHamburger] = useState(false);
-  const [show, setShow] = useState(null);
+  const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
-  const [rotate, setRotate] = useState(null);
+  const [rotate, setRotate] = useState(false);
 
   useEffect(() =>
   {
-    const isSmall = window.innerWidth <= 640;
+    const isSmall = window.innerWidth <= 639
     setHamburger(isSmall);
     setShow(!isSmall);
     window.addEventListener("resize", onResize);
-    // return () =>
-    // {
-    //   window.removeEventListener("resize", onResize);
-    // }
+    return () =>
+    {
+      window.removeEventListener("resize", onResize);
+    }
   }, [])
 
   useEffect(() =>
@@ -82,7 +82,7 @@ function Header(props: IHeaderProps)
 
   function onResize()
   {
-    const isSmall = window.innerWidth <= 640;
+    const isSmall = window.innerWidth <= 639;
     if (!hamburger)
     {
       setHamburger(isSmall)
@@ -113,7 +113,7 @@ function Header(props: IHeaderProps)
   return (
     <header className="fixed w-full z-10 text-gray-800 h-16 flex items-center border-b border-gray-400 bg-gray-100">
       <div className="container relative">
-        {hamburger && <button tabIndex={0} className={rotate ? "btnClicked" : "btnUnClicked"} onClick={toggleMenu}><i className={rotate ? "icon-close" : "icon-menu"} /></button>}
+        {hamburger && <button className="px-4" onClick={toggleMenu}><i className={rotate ? "icon-close" : "icon-menu"} /></button>}
         {show && <Animated
           from={hamburger ? { transform: "translateX(-100%)" } : {}}
           to={hamburger ? { transform: "translateX(0%)" } : {}}
@@ -121,11 +121,11 @@ function Header(props: IHeaderProps)
         >
           {
             props => (
-              <nav style={hamburger ? props : {}} className="top-40 absolute sm:static w-full h-screen bg-gray-700 z-50">
-                <ul className=" text-center flex flex-col h-full sm:flex-row sm:text-xl">
+              <nav style={hamburger ? props : {}} className="top-44 absolute sm:static w-full h-screen sm:h-auto bg-gray-700 sm:bg-transparent z-50">
+                <ul className="sm:text-justify text-center flex flex-col h-full sm:h-auto sm:h-auto sm:flex-row sm:text-xl">
                   {
                     tabs.map((tab, index) =>
-                      <li className={tab.text === "Arsen" ? "pb-4 sm:flex-1 font-bold" : "pb-4 sm:ml-5"} key={index}>
+                      <li className={tab.text === "Arsen" ? "sm:block hidden pb-4 sm:pb-0 sm:flex-1 font-bold" : "pb-4 sm:pb-0 sm:ml-5"} key={index}>
                         <AniLink
                           activeClassName="active"
                           to={tab.path}

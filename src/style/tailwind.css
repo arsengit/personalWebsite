@@ -36,11 +36,27 @@ body.dark header {
 @apply bg-gray-800
 }
 
+.input {
+  @apply border p-2;
+}
 
+button, input, textarea {
+  transition: box-shadow .3s ease-out;
+}
+
+button:hover {
+  @apply shadow-button;
+}
+
+input:hover, textarea:hover {
+  @apply shadow-hover;
+}
 
 .active {
-    @apply border-b border-yellow-200
+    @apply border-b border-yellow-200;
 }
+
+
 body {
     --bg: white;
     --textNormal: #222;
@@ -49,6 +65,10 @@ body {
     --hr: hsla(0, 0%, 0%, 0.2);
     transition: all .3s ease-out;
     background-color: var(--bg);
+  }
+
+  body.dark .bg-gray-900 {
+   background-color: @apply bg-gray-100;
   }
   
   body.dark {
@@ -107,7 +127,7 @@ body {
   }
 
   .section {
-    @apply pt-20;
+    @apply pt-32;
   }
 
 

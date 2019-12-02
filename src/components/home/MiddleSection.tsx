@@ -29,7 +29,7 @@ function MiddleSection()
                 }
                 if (i === text.length - 1 && first)
                 {
-                    typeWriter("Sowtware Engineer", ref2)
+                    typeWriter("I'm Sowtware Engineer.", ref2)
                 }
             }, 80 * i);
 
@@ -40,8 +40,8 @@ function MiddleSection()
     return (
         <>
             <div className="h-full flex justify-center items-center flex-col">
-                <div className="w-40 rounded-full border-2 border-gray-100">
-                    <Image className="rounded-full" image="myImg" />
+                <div className="w-40 rounded-50 border-2 border-gray-100">
+                    <Image className="rounded-50" image="myImg" />
                 </div>
                 <div className="h-20 flex justify-center flex-col">
                     <h2 ref={ref1} id="split-text1" className="h1" />
