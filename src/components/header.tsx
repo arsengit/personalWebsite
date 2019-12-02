@@ -111,7 +111,7 @@ function Header(props: IHeaderProps)
 
   const { siteTitle } = props;
   return (
-    <header className="fixed w-full z-10 text-gray-800 h-16 flex items-center border-b border-gray-400 bg-gray-100">
+    <header className="fixed w-full z-10 text-gray-800 h-16 flex items-center shadow-bottom bg-gray-100">
       <div className="container relative">
         {hamburger && <button className="px-4" onClick={toggleMenu}><i className={rotate ? "icon-close" : "icon-menu"} /></button>}
         {show && <Animated
@@ -121,7 +121,7 @@ function Header(props: IHeaderProps)
         >
           {
             props => (
-              <nav style={hamburger ? props : {}} className="top-44 absolute sm:static w-full h-screen sm:h-auto bg-gray-700 sm:bg-transparent z-50">
+              <nav style={hamburger ? props : {}} className="top-44 absolute sm:static w-full h-screen sm:h-auto sm:bg-transparent z-50 bg-gray sm:bg-transparent ">
                 <ul className="sm:text-justify text-center flex flex-col h-full sm:h-auto sm:h-auto sm:flex-row sm:text-xl">
                   {
                     tabs.map((tab, index) =>

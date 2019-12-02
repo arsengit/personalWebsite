@@ -22,12 +22,12 @@ function ContactIcons()
     return (
         <div>
             <h1 className="h1-bold">Contact Me</h1>
-            <div className="flex justify-between mt-20">
+            <div className="flex justify-between flex-col sm:flex-row mt-16 sm:mt-20">
                 {
                     anchors.map((item) => (
-                        <div className="flex" key={item.name}>
-                            <a className="h-16 w-16 bg-gray-900 text-gray-100 rounded-50 flex items-center justify-center text-xl ">
-                                <i className={item.icon} />
+                        <div className="flex pb-4 sm:p-0" key={item.name}>
+                            <a className="reverse-bg-color h-16 w-16 bg-dark-gray text-gray-100 rounded-50 flex items-center justify-center text-xl ">
+                                <i className={`reverse-colors ${item.icon}`} />
                             </a>
                             <div className="pl-2 flex flex-col justify-center">
                                 <span className="uppercase font-medium">{item.name}</span>
