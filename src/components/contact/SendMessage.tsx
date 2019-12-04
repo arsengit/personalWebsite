@@ -15,7 +15,7 @@ function SendMessage()
                 <input onChange={onChange} value={state.email} placeholder="Email" className="input w-48" type="text" name="email" />
             </div>
             <div>
-                <textarea onChange={onChange} value={state.message} placeholder="Message" className="resize-none w-full border p-2" name="message" id="" cols={30} rows={10}></textarea>
+                <textarea onChange={onChange} value={state.message} placeholder="Message" className="resize-none w-full p-2" name="message" id="" cols={30} rows={10}></textarea>
             </div>
             <div className="p-6">
                 <button className="font-medium reverse-colors reverse-bg-color button block m-auto bg-gray-900 text-white p-4">Send Message</button>

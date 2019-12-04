@@ -1,37 +1,12 @@
 import * as React from 'react';
 import MiddleSection from "./MiddleSection";
 import Particles from 'react-particles-js';
-import useTheme from "../IsDark";
+import useTheme from "../lib/useTheme/useTheme";
 
 function Home(props)
 {
-  // let [dark, setDark] = React.useState(false);
+
   let isDark = useTheme();
-
-  // React.useEffect(() =>
-  // {
-  //   if (document.body.classList.contains("dark"))
-  //   {
-  //     setDark(true)
-  //   }
-  //   window.addEventListener("change", onChange);
-  //   return () =>
-  //   {
-  //     window.removeEventListener("change", onChange);
-  //   }
-  // }, [])
-
-  // function onChange()
-  // {
-  //   if (document.body.classList.contains('dark'))
-  //   {
-  //     setDark(true)
-  //   }
-  //   else
-  //   {
-  //     setDark(false)
-  //   }
-  // }
   let params = {
     "particles": {
       "number": {
@@ -56,7 +31,6 @@ function Home(props)
       }
     }
   }
-  console.log(params, isDark)
   return (
     <div className="h-screen">
       <div className="absolute h-full w-full">
