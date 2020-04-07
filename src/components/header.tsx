@@ -21,12 +21,12 @@ let tabs = [
     path: "/",
     color: "",
   },
-  {
-    text: "About Me",
-    path: "about",
-    color: "",
-
-  },
+  // {
+  //   text: "About Me",
+  //   path: "about",
+  //   color: "",
+  //
+  // },
   {
     text: "Portfolio",
     path: "portfolio",
@@ -92,7 +92,7 @@ function Header(props: IHeaderProps)
     }
   }
 
-  function toggleMenu(e) 
+  function toggleMenu()
   {
     toggleIcon();
     if (show)
@@ -110,9 +110,9 @@ function Header(props: IHeaderProps)
   }
 
 
-  const { siteTitle } = props;
+  const {  } = props;
   return (
-    <header className={`fixed w-full z-10 text-gray-800 h-16 flex items-center shadow-header bg-gray-100`}>
+    <header className={`fixed w-full z-40 text-gray-800 h-16 flex items-center shadow-header bg-gray-100`}>
       <div className="container relative">
         {hamburger && <button className="px-4" onClick={toggleMenu}><i className={rotate ? "icon-close" : "icon-menu"} /></button>}
         {show && <Animated

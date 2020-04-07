@@ -23,10 +23,24 @@ const Image = (props) =>
             ...GatsbyImageSharpFluid
           }
         }
-      }
-      homeBg: file(relativePath: { eq: "main/homeBg.jpg" }) {
+      }   
+        ekn: file(relativePath: { eq: "portfolio/ekn.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, maxHeight: 1080) {
+          fluid(maxWidth: 400, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }     
+      credit: file(relativePath: { eq: "portfolio/credit.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      navasardi: file(relativePath: { eq: "portfolio/navasardi.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
