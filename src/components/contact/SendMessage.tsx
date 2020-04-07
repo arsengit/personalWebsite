@@ -7,9 +7,8 @@ function SendMessage()
         email: "",
         message: "",
     })
-    console.log(state)
     return (
-        <div>
+        <div className="mt-20">
             <div className="flex justify-between py-4">
                 <input onChange={onChange} value={state.name} placeholder="Name" className="input w-48" type="text" name="name" />
                 <input onChange={onChange} value={state.email} placeholder="Email" className="input w-48" type="text" name="email" />

@@ -29,7 +29,7 @@ function MiddleSection()
                 }
                 if (i === text.length - 1 && first)
                 {
-                    typeWriter("I'm Sowtware Engineer.", ref2)
+                    typeWriter("I'm Software Engineer.", ref2)
                 }
             }, 80 * i);
 

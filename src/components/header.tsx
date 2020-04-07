@@ -112,7 +112,7 @@ function Header(props: IHeaderProps)
 
   const { siteTitle } = props;
   return (
-    <header className={`fixed w-full z-10 text-gray-800 h-16 flex items-center shadow-bottom bg-gray-100`}>
+    <header className={`fixed w-full z-10 text-gray-800 h-16 flex items-center shadow-header bg-gray-100`}>
       <div className="container relative">
         {hamburger && <button className="px-4" onClick={toggleMenu}><i className={rotate ? "icon-close" : "icon-menu"} /></button>}
         {show && <Animated
@@ -123,10 +123,10 @@ function Header(props: IHeaderProps)
           {
             props => (
               <nav style={hamburger ? props : {}} className="top-40 pt-6 sm:pt-0 absolute sm:static w-full h-screen sm:h-auto sm:bg-transparent z-50 bg-gray sm:bg-transparent ">
-                <ul className="sm:text-justify text-center flex flex-col text-2xl h-full sm:h-auto sm:h-auto sm:flex-row sm:text-xl">
+                <ul className="sm:text-justify text-center flex flex-col text-base h-full sm:h-auto sm:h-auto sm:flex-row sm:text-base">
                   {
                     tabs.map((tab, index) =>
-                      <li className={tab.text === "Arsen" ? "sm:block hidden pb-6 sm:pb-0 sm:flex-1 font-bold" : "pb-6 sm:pb-0 sm:ml-5"} key={index}>
+                      <li className={tab.text === "Arsen" ? "sm:block hidden pb-6 sm:pb-0 sm:flex-1 font-bold" : "pb-6 sm:pb-0 sm:ml-10"} key={index}>
                         <AniLink
                           activeClassName="active"
                           to={tab.path}
