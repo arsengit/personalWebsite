@@ -1,12 +1,33 @@
 import * as React from 'react';
 
+interface IState
+{
+    name: string;
+    email: string;
+    message: string;
+}
+
+function reducer(state: IState, { type, value }): IState
+{
+    switch (type)
+    {
+        case "name":
+            return { ...state, name: value };
+            break;
+        case "email":
+            return { ...state, email: value }
+            break;
+        case "message":
+            return { ...state, message: value }
+            break;
+        default:
+            return state;
+    }
+}
+
 function SendMessage()
 {
-    let [state, setState] = React.useState({
-        name: "",
-        email: "",
-        message: "",
-    })
+    let [state, dispatch] = React.useReducer(reducer, { name: "", email: "", message: "" })
     return (
         <div className="mt-20">
             <div className="flex justify-between py-4">
@@ -25,9 +46,7 @@ function SendMessage()
     function onChange(e: React.SyntheticEvent<HTMLInputElement | HTMLTextAreaElement>)
     {
         const { name, value } = e.currentTarget;
-        let newState = { ...state };
-        newState[name] = value;
-        setState(newState);
+        dispatch({ type: name, value });
     }
 }
 
