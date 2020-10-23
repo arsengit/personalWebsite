@@ -5,11 +5,10 @@
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-
 }
 
-.tl-edges {
-  overflow-y: hidden;
+html, .tl-edges, body, #___gatsby, #gatsby-focus-wrapper {
+	height: 100%;
 }
 
 article, aside, details, figcaption, figure, 
@@ -33,4 +32,8 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+button:focus {
+	outline: none;
 }

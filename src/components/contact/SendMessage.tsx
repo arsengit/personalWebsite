@@ -13,13 +13,10 @@ function reducer(state: IState, { type, value }): IState
     {
         case "name":
             return { ...state, name: value };
-            break;
         case "email":
             return { ...state, email: value }
-            break;
         case "message":
             return { ...state, message: value }
-            break;
         default:
             return state;
     }
