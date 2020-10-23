@@ -8,24 +8,20 @@ let tabs = [
   {
     text: "Arsen",
     path: "/",
-    color: "",
   },
   {
     text: "About",
     path: "about",
-    color: "",
 
   },
   {
     text: "Portfolio",
     path: "portfolio",
-    color: "",
 
   },
   {
     text: "Contact",
     path: "contact",
-    color: "",
 
   },
 ]
@@ -37,6 +33,7 @@ const variants = {
 
 function Header()
 {
+  const isDark = useTheme();
   const [hamburger, setHamburger] = useState(false)
   const [show, setShow] = useState(false)
 
@@ -52,7 +49,8 @@ function Header()
     }
   }, [])
 
-  const toggleMenu = useCallback(() => {
+  const toggleMenu = useCallback(() =>
+  {
     setShow(!show)
   }, [show])
 
@@ -66,7 +64,6 @@ function Header()
       setShow(!isSmall)
     }
   }
-
 
 
   return (
@@ -88,7 +85,7 @@ function Header()
                   <AniLink
                     activeClassName="active"
                     to={tab.path}
-                    paintDrip hex={useTheme() ? "#798497" : "#40484C"}
+                    paintDrip hex={isDark ? "#718096" : "#cbd5e0"}
                   >{tab.text}</AniLink>
                 </li>,
               )

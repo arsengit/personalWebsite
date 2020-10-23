@@ -23,27 +23,6 @@ const Image = (props) =>
             ...GatsbyImageSharpFluid
           }
         }
-      }   
-        ekn: file(relativePath: { eq: "portfolio/ekn.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }     
-      credit: file(relativePath: { eq: "portfolio/credit.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      navasardi: file(relativePath: { eq: "portfolio/navasardi.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 400, quality: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
       }
       myImg: file(relativePath: { eq: "main/myImg.jpg" }) {
         childImageSharp {
@@ -51,10 +30,32 @@ const Image = (props) =>
             ...GatsbyImageSharpFluid
           }
         }
+      }  
+      navasardi: file(relativePath: { eq: "portfolio/navasardi.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, quality: 80) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      } 
+      ekn: file(relativePath: { eq: "portfolio/ekn.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, quality: 80) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }  
+      credit: file(relativePath: { eq: "portfolio/credit.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, quality: 80) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
+      
     }
   `)
-  return <Img fluid={data[props.image].childImageSharp.fluid} className={props.className} />
+  return <Img fluid={data[props.image].childImageSharp.fluid} className={props.className}/>
 }
 
 export default Image
