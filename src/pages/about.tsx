@@ -6,7 +6,7 @@ const SecondPage = () => (
   <Layout>
     <SEO title="About" />
     <div className="section container contact-section max-w-960 px-4 py-4 h-screen">
-      <h1 className="h1-bold">About</h1>
+      <h1 className="h1-bold">About Me</h1>
     </div>
   </Layout>
 )

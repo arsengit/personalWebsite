@@ -26,7 +26,7 @@ const Image = (props) =>
       }
       myImg: file(relativePath: { eq: "main/myImg.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300, quality: 40) {
+          fluid(maxWidth: 300, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

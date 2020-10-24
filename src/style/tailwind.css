@@ -19,7 +19,7 @@
   @apply text-4xl text-center text-gray-700;
 }
 
-body.dark .h1-bold, body.dark header, body.dark .h1{
+body.dark .h1-bold, body.dark header, body.dark .h1, body.dark .name-text{
   @apply text-gray-200
 }
 
@@ -143,5 +143,28 @@ body.dark {
 }
 .card-wrapper {
   height: 300px;
+}
+
+.name-text {
+  width: fit-content;
+  position: relative;
+}
+
+.name-text:after {
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-color: #ecc94b;
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  z-index: -1;
+  opacity: .4;
+}
+
+body.dark .name-text:after {
+  background-color: #018aa9;
+  opacity: .8;
 }
 
