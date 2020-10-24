@@ -77,7 +77,7 @@ function Header()
           variants={variants}
           className="top-40 pt-6 sm:pt-0 absolute sm:static w-full sm:w-full w-2/4 h-screen sm:h-auto sm:bg-transparent z-50 bg-gray sm:bg-transparent ">
           <ul
-            className="sm:text-justify text-center flex flex-col text-base h-full sm:h-auto sm:h-auto sm:flex-row sm:text-base">
+            className="sm:text-justify text-center flex flex-col text-base h-full sm:h-auto sm:h-auto sm:flex-row sm:text-base items-center">
             {
               tabs.map((tab, index) =>
                 {
@@ -92,7 +92,7 @@ function Header()
                         to={tab.path}
                         paintDrip hex={isDark ? "#718096" : "#cbd5e0"}
                       >
-                        {tab.text}
+                        {isFirst ? <span className="text-2xl">{tab.text}</span> : tab.text}
                       </AniLink>
                     </motion.li>
                   )

@@ -16,11 +16,6 @@ const portfolioData = [
     href: "https://universalcredit.am",
     title: "Universal Credit",
     details: "Credit Company.",
-  },  {
-    image: "credit",
-    href: "https://universalcredit.am",
-    title: "Universal Credit",
-    details: "Credit Company.",
   },
 ]
 
