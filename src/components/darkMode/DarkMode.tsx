@@ -6,16 +6,17 @@ function DarkMode()
     return (
         <ThemeToggler>
             {({ theme, toggleTheme }) => (
-                <div className="dark-toggle">
-                    <i className="icon-sun text-yellow-500 pr-2 text-xl" />
+                <div tabIndex={1} className="dark-toggle">
+                    <i tabIndex={1} className="icon-sun text-yellow-500 pr-2 text-xl" />
                     <input
+                      tabIndex={1}
                         type="checkbox"
                         id="switch"
                         onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
                         checked={theme === 'dark'}
                     />
-                    <label htmlFor="switch" />
-                    <i className="icon-moon pl-2 text-lg" />
+                    <label tabIndex={1} htmlFor="switch" />
+                    <i tabIndex={1} className="icon-moon pl-2 text-lg" />
                 </div>
             )}
         </ThemeToggler>

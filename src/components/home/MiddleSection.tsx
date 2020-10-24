@@ -52,7 +52,7 @@ function MiddleSection()
         </div>
         <div className="w-full max-w-2xl  mt-4 flex justify-center flex-col">
           <h2 ref={ref1} className="h1"/>
-          <span className="text-gray-900 text-xl text-center">Software Engineer. I’ve been creating on the web for around {new Date().getFullYear() - 2018} years and have become pretty good at it!</span>
+          <span className="text-gray-900 text-xl mt-2 text-center">Software Engineer. I’ve been creating on the web for around {new Date().getFullYear() - 2018} years and have become pretty good at it!</span>
           <div className="min-w-xs w-5/12 m-auto mt-4  h1 flex justify-between text-2xl z-10">
             {social.map(({ icon, path }) =>
             {
