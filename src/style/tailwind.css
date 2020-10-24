@@ -20,7 +20,7 @@
 }
 
 body.dark .h1-bold, body.dark header, body.dark .h1{
-  @apply text-gray-100
+  @apply text-gray-200
 }
 
 body.dark span {
@@ -65,8 +65,20 @@ body.dark .text-mode {
   color: #fff
 }
 
+.text-mode, .text-mode-gray {
+  transition: color .3s ease-out;
+}
+
 body .text-mode {
   color: #1a202c;
+}
+
+body .text-mode-gray {
+  @apply text-gray-700
+}
+
+body.dark .text-mode-gray {
+  @apply text-gray-400
 }
 
 body .reverse-colors {
@@ -126,4 +138,8 @@ body.dark {
   @apply pt-32;
 }
 
+
+.card-wrapper {
+  height: 300px;
+}
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Card from "../lib/card/Card";
+import Card from "../lib/card/PortfolioCard";
 import portfolioData from "./portfolioData"
 
 function PortfolioContainer()
