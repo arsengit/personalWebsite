@@ -48,9 +48,9 @@ function MiddleSection()
     <>
       <div className="h-full pl-4 pr-4 flex justify-center items-center flex-col flex-col-reverse md:flex-row">
         <div className="w-full max-w-2xl  mt-4 flex justify-center flex-col">
-          <h1 className="name-text m-auto md:m-0 font-bold text-5xl">Arsen Alkamyan</h1>
+          <h1 className="name-text m-auto md:m-0 font-bold text-4xl md:text-5xl">Arsen Alkamyan</h1>
           <span
-            className="text-gray-900 text-xl mt-2 text-center md:text-left">Software Engineer. I’ve been creating on the web for around {new Date().getFullYear() - 2018} years and have become pretty good at it!</span>
+            className="text-gray-900 text-xl mt-2 text-center md:text-left">Hi, I'm Software Engineer. I’ve been creating on the web for around {new Date().getFullYear() - 2018} years and have become pretty good at it!</span>
           <div className="min-w-xs w-5/12 m-auto mt-4 md:m-0  md:mt-4  h1 flex justify-between text-2xl z-10">
             {social.map(({ icon, path }) =>
             {
@@ -64,7 +64,7 @@ function MiddleSection()
             })}
           </div>
         </div>
-        <div className="w-64 rounded-50 border-2 md:ml-6 border-gray-100">
+        <div className="w-64 rounded-50 border-2 md:ml-6 border-gray-100 relative">
           <Image className="rounded-50" image="myImg"/>
         </div>
       </div>

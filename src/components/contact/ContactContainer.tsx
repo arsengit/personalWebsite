@@ -5,7 +5,7 @@ import SendMessage from "./SendMessage";
 function ContactContainer()
 {
     return (
-        <div className="section container contact-section max-w-960 px-4 py-4 h-screen">
+        <div className="lg:pt-32 pt-20 container contact-section max-w-960 px-4 py-4 h-screen">
             <ContactIcons />
             <SendMessage />
         </div>

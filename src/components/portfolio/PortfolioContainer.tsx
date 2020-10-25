@@ -5,7 +5,7 @@ import portfolioData from "./portfolioData"
 function PortfolioContainer()
 {
     return (
-        <div className="section container">
+        <div className="lg:pt-32 pt-20 container">
             <h1 className="h1-bold">Portfolio</h1>
             <div className="flex pb-4 mt-20 sm:justify-between flex-wrap sm:flex-row items-center flex-col justify-center p-4">
               {

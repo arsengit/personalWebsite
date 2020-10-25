@@ -31,6 +31,13 @@ const Image = (props) =>
           }
         }
       }  
+      animeImg: file(relativePath: { eq: "main/animeImg.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }  
       navasardi: file(relativePath: { eq: "portfolio/navasardi.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 400, quality: 80) {

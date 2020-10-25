@@ -31,6 +31,11 @@ const variants = {
   closed: { opacity: 0, x: "-100%" },
 }
 
+const buttonVariants = {
+  open: { rotate: 180 },
+  closed: { rotate: 0 },
+}
+
 function Header()
 {
   const isDark = useTheme()
@@ -78,18 +83,23 @@ function Header()
   }
 
   return (
-    <header tabIndex={1} className={`fixed w-full z-20 text-gray-800 h-16 flex items-center shadow-header bg-gray-200`}>
+    <header tabIndex={1} className={`fixed w-full z-20 text-gray-800 h-16 flex items-center shadow-header bg-gray-200 shadow-md`}>
       <div tabIndex={1} className="container relative">
         {hamburger &&
-        <button tabIndex={1} className="px-4" onClick={toggleMenu}><i tabIndex={1}
-                                                                      className={show ? "icon-close" : "icon-menu"}/>
-        </button>}
+        <motion.button
+          animate={show ? "open" : "closed"}
+          variants={buttonVariants}
+          tabIndex={1}
+          className="px-4"
+          onClick={toggleMenu}>
+          <i tabIndex={1} className={show ? "icon-close" : "icon-menu"}/>
+        </motion.button>}
         <motion.nav
           tabIndex={1}
           animate={show ? "open" : "closed"}
           initial={{ x: "-100%" }}
           variants={variants}
-          className="top-40 pt-6 sm:pt-0 absolute sm:static sm:w-full w-2/4 h-screen sm:h-auto sm:bg-transparent z-50 bg-gray sm:bg-transparent shadow-2xl">
+          className="top-40 pt-6 sm:pt-0 absolute sm:static sm:w-full w-3/5 h-screen sm:h-auto sm:bg-transparent z-50 bg-gray sm:bg-transparent shadow-2xl">
           <ul
             tabIndex={1}
             className="sm:text-justify text-center flex flex-col text-base h-full sm:h-auto sm:h-auto sm:flex-row sm:text-base items-center">
@@ -99,7 +109,7 @@ function Header()
                   const isFirst = tab.text === "Arsen"
                   return (<li
                       tabIndex={1}
-                      className={tab.text === "Arsen" ? "sm:block  pb-6 sm:pb-0 sm:flex-1 font-bold" : "pb-6 sm:pb-0 sm:ml-10"}
+                      className={`${tab.text === "Arsen" ? "sm:flex-1 font-bold" : "sm:ml-10"} mb-4 sm:mb-0 pb-6 sm:pb-0`}
                       key={index}>
                       <AniLink
                         tabIndex={1}
