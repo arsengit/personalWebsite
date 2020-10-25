@@ -22,7 +22,7 @@ function ContactIcons()
     return (
         <div>
             <h1 className="h1-bold">Contact Me</h1>
-            <div className="flex justify-between flex-col sm:flex-row mt-16 sm:mt-20">
+            <div className="flex justify-between flex-col sm:flex-row mt-12 sm:mt-20">
                 {
                     anchors.map((item) => (
                         <div className="flex pb-4 sm:p-0" key={item.name}>

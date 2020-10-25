@@ -58,6 +58,7 @@ function MiddleSection()
                 key={path}
                 href={path}
                 target={"_blank"}
+                rel="noreferrer"
                 whileHover={{ scale: 1.05, rotate: -20 }}
                 whileTap={{ scale: 0.95 }}
                 className={`icon-${icon} cursor-pointer`}/>)

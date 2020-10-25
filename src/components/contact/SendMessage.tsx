@@ -27,7 +27,7 @@ function SendMessage()
 {
   let [state, dispatch] = React.useReducer(reducer, { name: "", email: "", message: "" })
   return (
-    <div className="mt-20">
+    <div className="mt-6 sm:mt-20">
       <div className="flex justify-between py-4">
         <input onChange={onChange} value={state.name} placeholder="Name" className="input w-48" type="text"
                name="name"/>
