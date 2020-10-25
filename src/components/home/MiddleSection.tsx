@@ -16,34 +16,6 @@ const social = [
 
 function MiddleSection()
 {
-  let ref1 = React.useRef<any>()
-  let timeoutId
-
-  React.useEffect(() =>
-  {
-    let text1 = "Hi, I'm Arsen"
-    typeWriter(text1, ref1)
-    return () =>
-    {
-      clearTimeout(timeoutId)
-    }
-  }, [])
-
-  function typeWriter(text: string, ref: any)
-  {
-    for (let i = 0; i < text.length; i++)
-    {
-      timeoutId = setTimeout(() =>
-      {
-        if (ref.current)
-        {
-          ref.current.textContent += text.charAt(i)
-        }
-      }, 80 * i)
-
-    }
-  }
-
   return (
     <>
       <div className="h-full pl-4 pr-4 flex justify-center items-center flex-col flex-col-reverse md:flex-row">

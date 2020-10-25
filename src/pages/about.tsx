@@ -10,9 +10,7 @@ const SecondPage = () => <Layout>
   <SEO title="About"/>
   <div className="lg:pt-32 pt-20 section-about container contact-section px-4 py-4 h-screen">
     <h1 className="h1-bold">About Me</h1>
-
     <div className="mt-20 flex justify-center items-center flex-col  lg:flex-row">
-
       <div className="w-64 rounded-50 border-2 lg:mr-20 border-gray-100 relative">
         <motion.i
           animate={{ rotate: 360 }}
@@ -20,8 +18,6 @@ const SecondPage = () => <Layout>
           className="icon-blob absolute my-img-icon h1  z-20 inline-block"/>
         <Image className="rounded-50" image="animeImg"/>
       </div>
-
-
       <div className="max-w-2xl mb-8  mt-12 flex justify-center flex-col">
         <p className="text-mode text-xl">
           Hi, this is my webpage, so I have to say something about myself. Sometimes it is hard to introduce yourself
@@ -32,7 +28,7 @@ const SecondPage = () => <Layout>
           <motion.a
             whileHover={{ scale: 1.05, rotate: -6 }}
             whileTap={{ scale: 0.95 }}
-            className="text-2xl anchor-link"
+            className="text-2xl anchor-link mr-2 ml-2"
             href="https://www.linkedin.com/company/digitain-armenia/mycompany/"
             target="_blank">
             Digitain
