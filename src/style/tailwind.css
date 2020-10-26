@@ -189,3 +189,6 @@ body.dark .name-text:after, body.dark .h1-bold:after,body.dark .anchor-link:afte
   height: 6px;
 }
 
+.tl-edges {
+  overflow-x: initial !important;
+}

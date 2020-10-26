@@ -56,6 +56,15 @@ function Header()
     }
   }, [])
 
+  function onTransitionEnd()
+  {
+    setTimeout(() =>
+    {
+      const wrapper: any = document.getElementsByClassName("tl-wrapper")[0]
+      wrapper.style.transform = "unset"
+    }, 2500)
+  }
+
   function handleClick(e)
   {
     const { tabIndex } = e.target
@@ -79,11 +88,11 @@ function Header()
       setHamburger(isSmall)
       setShow(!isSmall)
     }
-
   }
 
   return (
-    <header tabIndex={1} className={`fixed w-full z-20 text-gray-800 h-16 flex items-center shadow-header bg-gray-200 shadow-md`}>
+    <header tabIndex={1}
+            className={`fixed w-full z-20 text-gray-800 h-16 flex items-center shadow-header bg-gray-200 shadow-md top-0`}>
       <div tabIndex={1} className="container relative">
         {hamburger &&
         <motion.button
@@ -115,11 +124,15 @@ function Header()
                         tabIndex={1}
                         activeClassName="active"
                         to={tab.path}
+                        duration={1}
+                        onClick={onTransitionEnd}
                         paintDrip hex={isDark ? "#718096" : "#cbd5e0"}
                       >
                         <motion.span tabIndex={1} whileHover={{ scale: 1.05, rotate: -7 }}
                                      whileTap={{ scale: 0.95 }}
-                                     className={isFirst ? "text-2xl inline-block" : "inline-block text-lg"}>{tab.text}</motion.span>
+                                     className={isFirst ? "text-2xl inline-block" : "inline-block text-lg"}>
+                          {tab.text}
+                        </motion.span>
                       </AniLink>
                     </li>
                   )
