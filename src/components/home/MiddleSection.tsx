@@ -20,9 +20,9 @@ const social = [
 function MiddleSection() {
   return (
     <>
-      <div className="h-full pl-4 pr-4 flex justify-center items-center flex-col flex-col-reverse md:flex-row">
+      <div className="md:h-full pl-4 pr-4 flex justify-center items-center flex-col flex-col-reverse lg:flex-row">
         <div className="w-full max-w-2xl  mt-4 flex justify-center flex-col">
-          <h1 className="name-text m-auto md:m-0 font-bold text-4xl md:text-5xl">
+          <h1 className="name-text m-auto lg:m-0 font-bold text-4xl md:text-5xl">
             Arsen Alkamyan
           </h1>
           <div className="max-w-2xl mb-8  mt-12 flex justify-center flex-col bio">
@@ -60,7 +60,7 @@ function MiddleSection() {
               Resume <i className="icon-checkmark" />
             </motion.a>
           </div>
-          <div className="min-w-xs w-5/12 m-auto mt-4 md:m-0  md:mt-4  h1 flex justify-between text-2xl z-10">
+          <div className="min-w-xs w-5/12 m-auto mt-4 md:m-0  md:mt-4 sm:pb-0 pb-10  h1 flex justify-between text-2xl z-10">
             {social.map(({ icon, path }) => {
               return (
                 <motion.a
@@ -76,7 +76,7 @@ function MiddleSection() {
             })}
           </div>
         </div>
-        <div className="w-64 rounded-50 border-2 md:ml-6 border-gray-100 relative avatarImg" />
+        <div className="w-64 h-64 rounded-50 mt-20 md:mt-0 border-2 md:ml-6 border-gray-100 relative avatarImg" />
       </div>
     </>
   )

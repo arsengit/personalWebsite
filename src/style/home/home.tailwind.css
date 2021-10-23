@@ -62,8 +62,8 @@ body.dark  .icon-sun{
     background-image: url('../../images/main/avatar.jpg');
     background-position: center;
     background-size: cover;
-    height: 300px;
-    width: 300px;
+    /* height: 300px; */
+    /* width: 300px; */
   }
 
   .bio {
