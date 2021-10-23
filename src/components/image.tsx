@@ -13,8 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = (props) =>
-{
+const Image = props => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
@@ -24,34 +23,34 @@ const Image = (props) =>
           }
         }
       }
-      myImg: file(relativePath: { eq: "main/myImg.jpg" }) {
+      avatar: file(relativePath: { eq: "main/avatar.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
-      }  
+      }
       animeImg: file(relativePath: { eq: "main/animeImg.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
-      }  
+      }
       navasardi: file(relativePath: { eq: "portfolio/navasardi.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 400, quality: 80) {
             ...GatsbyImageSharpFluid
           }
         }
-      } 
+      }
       ekn: file(relativePath: { eq: "portfolio/ekn.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 400, quality: 80) {
             ...GatsbyImageSharpFluid
           }
         }
-      }  
+      }
       credit: file(relativePath: { eq: "portfolio/credit.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 400, quality: 80) {
@@ -59,10 +58,14 @@ const Image = (props) =>
           }
         }
       }
-      
     }
   `)
-  return <Img fluid={data[props.image].childImageSharp.fluid} className={props.className}/>
+  return (
+    <Img
+      fluid={data[props.image].childImageSharp.fluid}
+      className={props.className}
+    />
+  )
 }
 
 export default Image
