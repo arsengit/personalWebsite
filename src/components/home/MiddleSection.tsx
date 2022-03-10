@@ -29,10 +29,8 @@ function MiddleSection() {
             <p className="text-mode text-xl">
               Hi, this is my webpage, so I have to say something about myself.
               Sometimes it is hard to introduce yourself because you know
-              yourself so well that you do not know where to start with.I'm
-              Arsen Alkamyan, Software Engineer from Armenia. Currently I'm
-              learning Informatics And Applied Mathematics at Yerevan State
-              University and working at
+              yourself so well that you do not know where to start with. I'm
+              Arsen. Currently I'm working at
               <motion.a
                 whileHover={{ scale: 1.05, rotate: -6 }}
                 whileTap={{ scale: 0.95 }}
@@ -42,12 +40,9 @@ function MiddleSection() {
               >
                 AimHub
               </motion.a>
-              as Software Engineer.My first steps at development I started at
-              2018. I loved coding and started learn deeper. New and open source
+              as a Engineer/Core Contributor. New and open source
               web technologies make me super excited and I can’t wait to see
-              what is to come of the web in the next few years. I'm very
-              passionate about web development and hard working on myself to be
-              very good at it.
+              what is to come of the web in the next few years.
             </p>
             <motion.a
               rel="noreferrer"
